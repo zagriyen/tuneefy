@@ -1,9 +1,8 @@
 <?php
 
   // We get the request
-
-  if(!isset($_SERVER['SERVER_NAME']) || $_SERVER['SERVER_NAME'] != "api.tuneefy.com"){
-    header ("Location: /404");
+  if(!isset($_SERVER['SERVER_NAME']) || substr($_SERVER['SERVER_NAME'],-15) != "api.tuneefy.com" ){
+    header ("Location: http://tuneefy.com/404");
     exit;
   }
 
